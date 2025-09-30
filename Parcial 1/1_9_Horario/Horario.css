@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+}
+h1 {
+    text-align: center;
+    color: #8C405C; /*Color del titulo*/
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+th, td { /*Bordes*/
+    border: 1px solid #f8d0e7; 
+    padding: 10px;
+    vertical-align: top;
+}
+th {
+    background-color: #E683A9;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    background-color: #FFF0F5; 
+}
+
+tr:nth-child(even) td {
+    background-color: #F8E6EE; 
+}
+
+tr:hover td {
+    background-color: #FAD1E6; 
+}
+
+
+td:first-child {
+    font-weight: 600;
+    color: #8C405C; /*Texto de materias/maestro*/
+    text-align: left;
+}

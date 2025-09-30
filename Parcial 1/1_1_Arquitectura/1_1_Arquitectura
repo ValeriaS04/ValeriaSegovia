@@ -1,0 +1,142 @@
+<h1 style="color:hotpink;">Arquitecturas de aplicaciones web</h1>
+
+<h2 style="color:deepskyblue; font-family:Arial, Helvetica, sans-serif"> 1. Por el Módulo de Comunicación </h2>
+
+Es la forma en que los diferentes sistemas, nodos o dispositivos se comunican e intercambian información. Define si la interacción ocurre de manera centralizada (cliente-servidor) o descentralizada (punto a punto).
+
+![Imagen](https://blogger.googleusercontent.com/img/a/AVvXsEgmIdqRmtVhidoFl0cduJP1sMYN4zmJQ2VihjA6EHvJkGbypevaM4jbO4jLrEVDhfd3G2SlX1pxJp-Ne-Hw3ss5fTThx9BU4Wy-imWtjllkW07p-xLLcz_grBik4kw68WgOiYUZ59h6Y1zPhZ8n_Mo0PAn3haQaRyguTypiRmVvANwRIuJaMYzwI-r4rQ=s1280)
+
+---
+
+### 1.1 Modelo Cliente - Servidor
+
+***Definición***  
+Arquitectura centralizada donde un servidor ofrece servicios o recursos, y múltiples clientes realizan peticiones para acceder a ellos.
+
+***Funcionamiento***  
+El servidor procesa las solicitudes de los clientes y responde con los datos o servicios solicitados. Los clientes dependen del servidor para acceder a los recursos.
+
+***Características principales***
+- Centralización de recursos y servicios.
+- Facilidad para aplicar políticas de seguridad y mantenimiento.
+- Dependencia del servidor; si falla, los clientes no pueden acceder a los servicios. 
+
+
+![Imagen](https://reactiveprogramming.io/_next/image?url=%2Ffigures%2Fcliente-servidor.png&w=640&q=75)
+
+---
+
+### 1.2 Punto a Punto (P2P)
+
+***Definición***  
+Arquitectura descentralizada donde todos los nodos tienen el mismo rol y pueden actuar tanto como clientes como servidores, compartiendo recursos directamente entre ellos.
+
+***Funcionamiento***  
+Cada nodo puede solicitar y proporcionar servicios o recursos a otros nodos de la red, sin necesidad de un servidor central.
+
+***Características principales***
+- Alta escalabilidad y resiliencia.
+- Mayor complejidad en la gestión de seguridad y control.
+- Rendimiento variable según la capacidad de los nodos.
+
+![Imagen](https://reactiveprogramming.io/_next/image?url=%2Ffigures%2Fp2p.png&w=828&q=75)
+
+---
+
+
+<h2 style="color:deepskyblue; font-family:Arial, Helvetica, sans-serif"> 2. Por la Organización del Código de la Aplicación </h2>
+
+
+Se refiere a la forma en que se estructura internamente una aplicación. Define cómo se distribuyen las responsabilidades, la lógica y los datos dentro del software. Según el modelo, puede ser un bloque único (monolito), dividirse en capas con funciones específicas, en microservicios independientes o en funciones serverless ejecutadas bajo demanda en la nube.
+
+![Imagen](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F80m1bw99mykv9f9rnf8x.jpg)
+
+### 2.1 Monolito
+
+***Definición***  
+Arquitectura donde toda la aplicación se desarrolla como un único bloque de código, integrando interfaz, lógica de negocio y acceso a datos.
+
+***Funcionamiento***  
+Todo el sistema se ejecuta como un programa indivisible. Esto simplifica el desarrollo inicial, pero cualquier cambio afecta a toda la aplicación.
+
+***Características principales***
+- Desarrollo y despliegue inicial sencillo.
+- Escalabilidad limitada.
+- Mantenimiento y pruebas más complejas a medida que la aplicación crece.
+
+![Imagen](https://wac-cdn.atlassian.com/dam/jcr:95b9a276-c524-42b1-8d06-ded56d589858/Monolithic%20architecture@2x.png?cdnVersion=2932)
+
+---
+
+###  2.2 Sistema en Capas
+
+
+***Definición***  
+Arquitectura que organiza la aplicación en capas jerárquicas, cada una con funciones específicas: presentación, negocio y datos.
+
+***Funcionamiento***  
+Cada capa se comunica solo con las adyacentes. Esto facilita modificaciones, mantenimiento y pruebas sin afectar todo el sistema.
+
+***Características principales***
+- Separación clara de responsabilidades.
+- Facilita pruebas, mantenimiento y reutilización.
+- Demasiadas capas pueden aumentar la complejidad y afectar el rendimiento.
+
+![Imagen](https://upload.wikimedia.org/wikipedia/commons/e/ea/Tres_capas.PNG)
+
+---
+
+### 2.3 Microservicios
+
+
+***Definición***  
+Arquitectura que divide la aplicación en servicios pequeños e independientes, cada uno especializado en una función concreta y que se comunica mediante APIs o mensajería.
+
+***Funcionamiento***  
+Cada microservicio puede desarrollarse, desplegarse y escalarse de forma autónoma. Un fallo en uno no afecta al resto del sistema. Alta disponibilidad y flexibilidad, aunque requiere infraestructura y monitoreo.
+
+***Características principales***
+- Escalabilidad flexible y tolerancia a fallos.
+- Independencia entre servicios.
+- Requiere infraestructura de comunicación y monitoreo.
+- Complejidad en integración y pruebas.
+
+![Imagen](https://wac-cdn.atlassian.com/dam/jcr:5308ccab-dc94-46f5-978c-8a77b8d5be57/Microservice%20architecture@2x.png?cdnVersion=2932)
+---
+
+###  2.4 Serverless
+
+
+***Definición***  
+Arquitectura de ejecución en la nube donde se suben funciones que se ejecutan bajo demanda, sin gestionar servidores directamente.
+
+***Funcionamiento***  
+Las funciones se activan ante eventos específicos (clic, carga de archivo, pago). El proveedor de la nube gestiona infraestructura y escalado automáticamente. Pago solo por el tiempo de ejecución real.
+
+***Características principales***
+- Escalabilidad automática y eficiente.
+- Reducción de costos.
+- Sin necesidad de administrar servidores.
+- Dependencia del proveedor y limitaciones de ejecución.
+
+![imagen](https://dc722jrlp2zu8.cloudfront.net/media/uploads/2021/09/17/1.jpg)  
+---  
+### <h2 style="color:deepskyblue; font-family:Arial, Helvetica, sans-serif">Tabla comparativa de las arquitecturas
+
+| Arquitectura      | Definición breve                                   | Funcionamiento resumido                     | Ejemplos                |
+|-------------------|----------------------------------------------------|---------------------------------------------|--------------------------|
+| Cliente-Servidor  | Servidor central atiende a varios clientes.        | El servidor responde a peticiones de clientes. | Páginas web, correo.     |
+| Punto a Punto     | Todos los nodos son iguales (clientes y servidores). | Los nodos comparten recursos entre sí.       | Torrent, blockchain.     |
+| Monolito          | Toda la app en un bloque único.                    | Se ejecuta como un todo indivisible.         | Apps antiguas, ERP.      |
+| Sistema en Capas  | App dividida en capas (presentación, negocio, datos). | Cada capa habla con la siguiente.            | Apps empresariales.      |
+| Microservicios    | App dividida en servicios independientes.          | Cada servicio funciona y escala por separado. | Netflix, Amazon.         |
+| Serverless        | Funciones en la nube bajo demanda.                 | Se ejecutan ante eventos, sin servidores propios. | AWS Lambda, GCF.        |
+
+### <h2 style="color:deepskyblue; font-family:Arial, Helvetica, sans-serif">Referencias bibliograficas 
+
+[Cliente-servidor](https://es.wikipedia.org/wiki/Cliente-servidor)   
+[Punto a punto](https://es.wikipedia.org/wiki/Comunicaciones_punto-a-punto)  
+[Monolito](https://www.ibm.com/think/topics/monolithic-architecture)  
+[Sistema en capas](https://reactiveprogramming.io/blog/es/estilos-arquitectonicos/capas)  
+[Microservicios](https://es.wikipedia.org/wiki/Arquitectura_de_microservicios)  
+[Severless](https://openwebinars.net/blog/que-es-serverless-ventajas-y-servicios/)
