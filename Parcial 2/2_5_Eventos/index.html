@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Taylor Swift</title>
+  <link rel="stylesheet" href="diseño.css" />
 </head>
 <body>
-  <link rel="stylesheet" href="diseño.css" />
   <div class="contenedor">
-  <hr width="60%">
-  <h1><font color="#b30059" size="7"><center>Taylor Swift</h1></font></center>
+    <hr width="60%">
+    <h1><font color="#b30059" size="7"><center>Taylor Swift</center></font></h1>
 
-  <center><img src="https://www.sopitas.com/wp-content/uploads/2023/08/taylor-swift-midnights-the-era-tour.webp?resize=1024,683" 
-       alt="Taylor Swift en concierto" 
-       width="300"></center>
+      <img id="imagenTaylor" 
+           src="https://www.sopitas.com/wp-content/uploads/2023/08/taylor-swift-midnights-the-era-tour.webp?resize=1024,683" 
+           alt="Taylor Swift en concierto" 
+           width="300">
 
-  <p>
-    <strong>Taylor Alison Swift</strong> (nacida el 13 de diciembre de 1989) es una 
-    cantautora, productora y actriz estadounidense. Es conocida por reinventarse 
-    musicalmente en cada álbum y por ser una de las artistas más influyentes de la industria.
-  </p>
+    <p>
+      <strong>Taylor Alison Swift</strong> (nacida el 13 de diciembre de 1989) es una 
+      cantautora, productora y actriz estadounidense. Es conocida por reinventarse 
+      musicalmente en cada álbum y por ser una de las artistas más influyentes de la industria.
+    </p>
 
-  <h2>Álbumes destacados</h2>
-    <ul>
+    <h2>Álbumes destacados</h2>
+    <ul id="listaAlbumes">
       <li>Fearless (2008)</li>
       <li>Red (2012)</li>
       <li>1989 (2014)</li>
@@ -41,54 +42,55 @@
     </ol>
 
     <h2>Datos curiosos</h2>
-    <center><table border="1" cellpadding="8" cellspacing="0" bgcolor="#ffffff">
-      <tr bgcolor="#f2d9e6">
-        <th>Dato</th>
-        <th>Descripción</th>
-      </tr>
-      <tr>
-        <td>Signo Zodiacal</td>
-        <td>Sagitario</td>
-      </tr>
-      <tr>
-        <td>Instrumentos</td>
-        <td>Guitarra, piano, banjo</td>
-      </tr>
-      <tr>
-        <td>Fans</td>
-        <td>Se hacen llamar <i>Swifties</i></td>
-      </tr>
-    </table></center>
+      <table id="tablaDatos" border="1" cellpadding="8" cellspacing="0" bgcolor="#ffffff">
+        <tr bgcolor="#f2d9e6">
+          <th>Dato</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td>Signo Zodiacal</td>
+          <td>Sagitario</td>
+        </tr>
+        <tr>
+          <td>Instrumentos</td>
+          <td>Guitarra, piano, banjo</td>
+        </tr>
+        <tr>
+          <td>Fans</td>
+          <td>Se hacen llamar <i>Swifties</i></td>
+        </tr>
+      </table>
 
-    
     <h2>Únete al club de fans</h2>
     <div class="contenedor-form">
-      <form>
-      <label>Nombre: </label><br>
-      <input type="text" name="nombre" required placeholder="Val Swiftie"><br><br>
+      <form id="formulario">
+        <label>Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" required placeholder="Val Swiftie"><br><br>
 
-      <label>Correo electrónico: </label><br>
-      <input type="email" id="correo" name="correo" required placeholder="TaySwift@gmail.com"><br><br>
+        <label>Correo electrónico: </label><br>
+        <input type="email" id="correo" name="correo" required placeholder="TaySwift@gmail.com"><br><br>
 
-      <label>Álbum favorito: </label><br>
-      <select name="album">
-        <option>Fearless</option>
-        <option>Red</option>
-        <option>1989</option>
-        <option>Folklore</option>
-        <option>Midnights</option>
-      </select><br><br>
+        <label>Álbum favorito: </label><br>
+        <select name="album">
+          <option>Fearless</option>
+          <option>Red</option>
+          <option>1989</option>
+          <option>Folklore</option>
+          <option>Midnights</option>
+        </select><br><br>
 
-      <input type="submit" value="Unirme">
+        <input type="submit" value="Unirme">
       </form>
     </div>
+
     <h2>Enlaces</h2>
     <p>
       <a href="https://www.taylorswift.com" target="_blank">Página oficial</a> |
       <a href="https://es.wikipedia.org/wiki/Taylor_Swift" target="_blank">Wikipedia</a>
     </p>
     <hr width="60%">
-    </div>
-    <script src="evento.js"></script>
+  </div>
+
+  <script src="evento.js"></script>
 </body>
 </html>

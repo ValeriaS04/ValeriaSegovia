@@ -83,3 +83,17 @@ Metodo Dom API
 elemento=document.getElementById('id') Esta consulta tiene propiedadeees
 
 Trabajar con clases 
+
+BOM window.
+Dom window document
+CSSOM window.document.styleshet
+
+Fases de los eventos
+- Generacion
+- Captura
+- 
+- Propagacion burbujeo
+
+Formatos de intercambio de informacion XML,JSON,YAML,TOML
+Son maneras en la que representas estructura de datos 
+
