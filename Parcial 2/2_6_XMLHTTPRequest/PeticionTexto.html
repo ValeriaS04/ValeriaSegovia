@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XHR</title>
+</head>
+<body>
+  <button id="btn">Obtener chiste</button>
+  <div id="respuesta"></div>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", cargarDatos);
+
+    function cargarDatos() {
+      let solicitud = new XMLHttpRequest();
+
+      solicitud.onload = function() {
+        console.log(solicitud.response);
+        let datos = JSON.parse(solicitud.response);
+        document.getElementById("respuesta").innerText = datos.value;
+      };
+
+      solicitud.open('GET', 'https://api.chucknorris.io/jokes/random', true);
+      solicitud.send();
+    }
+  </script>
+</body>
+</html>

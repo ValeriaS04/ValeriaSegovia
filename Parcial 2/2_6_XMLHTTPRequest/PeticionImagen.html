@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gatitos con XMLHttpRequest</title>
+</head>
+<body>
+  <h2>Gatito Aleatorio</h2>
+  <button onclick="obtenerGatito()">Mostrar Gatito (XHR)</button>
+  <button onclick="obtenerGatitoFetch()">Mostrar Gatito (Fetch)</button>
+  <br><br>
+  <div id="resp"></div>
+  <img id="gatito" width="300">
+
+  <script>
+    function obtenerGatito() {
+      let solicitud = new XMLHttpRequest();
+
+      solicitud.onload = function() {
+        console.log("Respuesta de la API:", solicitud.response);
+        let datos = JSON.parse(solicitud.response);
+        document.getElementById("gatito").src = datos[0].url;
+      };
+
+      solicitud.open('GET', 'https://api.thecatapi.com/v1/images/search', true);
+      solicitud.send();
+    }
+
+    function obtenerGatitoFetch() {
+    fetch('https://api.thecatapi.com/v1/images/search')
+      .then((respuesta) => respuesta.json()) 
+      .then((datos) => {
+        console.log("Respuesta de la API:", datos);
+        document.getElementById("gatito").src = datos[0].url; 
+      })
+      .catch((error) => {
+        console.error("Error al obtener el gatito:", error);
+      });
+  }
+  </script>
+</body>
+</html>

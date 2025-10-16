@@ -97,3 +97,42 @@ Fases de los eventos
 Formatos de intercambio de informacion XML,JSON,YAML,TOML
 Son maneras en la que representas estructura de datos 
 
+JQuery 
+
+XMLHTTPRequest
+metodo open, send, abort
+
+let solicitud = new XMLHttpRequest();
+
+solicitud.onload = function() {
+        console.log(solicitud.response);
+    } 
+solicitud.open('GET', 'URL', TRUE);
+solicitud.send();
+
+
+let solicitud = new XMLHttpRequest();
+solicitud.onreadystatechange = function() {
+    if (solicitud.readyState == 4 && this.status == 200) {
+        console.log(solicitud.response);
+    }
+}
+solicitud.open('GET', 'URL', TRUE);
+solicitud.send();
+
+AJAX  --examen 
+Actualizar una parte de la pagina solamente 
+
+XHR, Fetch
+
+Asincronia, No espera a que una tarea termine para continuar
+Sincrona, una tarea detras de otra tarea 
+
+
+Funciones flecha son mas sencillas de hacer que las funciones normales
+Callback
+    seTimeout(function (){console.log('Hello World')}, 5000)
+Promesa
+    Algo que va a suceder, codigo que va a tardar
+    Estados de la promesa
+    
