@@ -135,4 +135,4 @@ Callback
 Promesa
     Algo que va a suceder, codigo que va a tardar
     Estados de la promesa
-    
+Sincrono renameSync si le quitas el sycn lo puedes hacer con callback, promise, async-await
