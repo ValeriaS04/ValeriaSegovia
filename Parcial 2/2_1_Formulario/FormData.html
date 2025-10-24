@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar formulario</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body>
+  <form id="miForm" class="pure-form" action="https://echo.free.beeceptor.com" method="POST" target="resultadoPOST">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+
+    <button class="pure-button pure-button-primary" type="submit">Enviar</button>
+    <button id="btnEnviar" class="pure-button" type="button">Enviar Fetch</button>
+  </form>
+
+  <iframe name="resultadoPOST" style="width:100%; height:200px;"></iframe>
+
+  <script>
+    document.getElementById("btnEnviar").addEventListener("click", function() {
+     
+      const form = document.getElementById("miForm");
+      const datosForm = new FormData(form);
+
+      console.log("Datos enviados con Fetch:");
+      for (const [clave, valor] of datosForm.entries()) {
+        console.log(`${clave}: ${valor}`);
+      }
+
+      fetch("https://echo.free.beeceptor.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: datosForm
+      })
+      .then(respuesta => respuesta.json())
+      .then(datos => {
+        console.log("Respuesta datos", datos);
+      })
+      
+      .catch(error => {
+        console.error("Error al enviar los datos:", error);
+      });
+    });
+  </script>
+</body>
+</html>
