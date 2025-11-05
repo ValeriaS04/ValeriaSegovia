@@ -141,3 +141,30 @@ Empaquetadores, links, scripts, Jquery, angular
 
 const datosForm = new FormData(document.getElementById("idForm"));
 const cadenaUrl = new URLSearchParams(datosForm).toString();
+
+framework es todo un entorno para trabajar mientras que la libreria solo son funciones
+
+REACT
+Es una libreria para construir interfaces de usuarios, 
+Las aplicaciones de react estan hechas de componentes, un compoente es una pieza de ui con su propia logica y apariencia, son simplementes funciones de JS que devuelven markup. Se pueden anidar para usarse en otros componentes. MiBoton empieza con mayuscula. Asi es como se identifica que es un compoente de react, la palabra clave export default especifican el componente principal en el archivo.
+React usa una sintaxis llamada JSX que permite escribir html dentro e js. 
+Jsx es mas estricto que html, se deben cerrar las etiquetas, un componente no puede devolver multiples etiquetas de JSX
+
+JSX permite integrar logica de js facilmente usando llaves.
+Se responde a eventos (como clic) con funciones controladoras
+onClick={miFuncion}
+
+Estado. es la memoria de un componente (que campos de formulario ya se lleno, etc)
+Para añadir estado se usa el Hook useState
+useState te da dos cosas, el valor actual del estado y una funcion para actualizarlo.
+
+const[valos,setValor] = useState(valorInicial);
+
+cuando se llama la funcion setValor, React vuelve a renderizar el componente con el nuevo valor 
+
+Parcial 3 - arquitecturas mas usadas para intercambiar datos cliente servidor
+SOAP xml url unica
+REST json endopoints te trae todos los datos
+GraphQL sql url unica consulta los datos y solo te trae lo que quieres
+
+Webso
